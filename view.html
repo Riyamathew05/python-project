@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>View All Employee</title>
+    <link rel="stylesheet" href="../static/emp.css">
+
+</head>
+
+<body background="../static/bgimg.jpg">
+    <h1>Employee List</h1>
+    <table border="1px">
+    <thead>
+        <tr>
+            <th>Emp ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in sqldata %}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+    </table>
+</body>
+</html>
